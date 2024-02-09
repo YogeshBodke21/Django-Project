@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block title %}
+DELETE | confirmation
+{% endblock%}
+
+{% block main %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <center><h2>DELETE CONFIRMATION</h2></center>
+
+        <h3>DO you really want to delete the record?</h3>
+        <input type="submit" class="btn btn-outline-danger btn-sm" value="YES">
+        <a href="{% url 'retrieve_url'%}" ><input type="button" value="NO" class="btn btn-outline-success btn-sm"></a>
+    </form>
+</div>
+{% endblock %}

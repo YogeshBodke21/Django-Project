@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title%}
+SIGN UP
+{% endblock %}
+
+{% block main%}
+<form method="post" class="container bg-light col-6 p-5">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="SIGN UP" class="btn btn-success col-3">
+    <input type="reset" value="RESET" class="btn btn-warning col-3">
+</form>
+
+{% endblock %}
